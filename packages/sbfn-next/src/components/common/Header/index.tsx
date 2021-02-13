@@ -35,6 +35,8 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   width: 100%;
+  background-color: var(--white);
+  box-shadow: inset 0 -0.1rem var(--gray300);
 `;
 
 //FIXME(aida) https://github.com/styled-components/styled-components/issues/1449#issuecomment-520821415

@@ -4,13 +4,16 @@ import { Container } from '@components/common';
 export const Footer = () => {
   return (
     <StyledFooter>
-      <StyledFooterContainer center={true}>made with ♥️ by Reactboy</StyledFooterContainer>
+      <StyledFooterContainer center={true}>made with ♥️ by reactboy</StyledFooterContainer>
     </StyledFooter>
   );
 };
 
 const StyledFooter = styled.footer`
-  padding: 0.8rem 1.6rem;
+  background-color: var(--white);
+  border-top: 0.1rem solid var(--gray300);
 `;
 
-const StyledFooterContainer = styled((props) => <Container {...props} />)``;
+const StyledFooterContainer = styled((props) => <Container {...props} />)`
+  padding: 0.8rem 1.6rem;
+`;
