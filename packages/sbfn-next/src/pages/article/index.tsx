@@ -9,9 +9,6 @@ const Article: React.FC<Props> = (props) => {
   const { articles } = props;
   return (
     <>
-      <header>
-        <h1>articles</h1>
-      </header>
       <main>
         <ul>
           {articles.map(({ title, id }) => (
