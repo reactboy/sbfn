@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from '@components/common';
+import { Link, Container } from '@components/common';
 
 const HEADER_NAV_ITEM = [
   {
@@ -15,29 +15,32 @@ const HEADER_NAV_ITEM = [
 export const Header = () => {
   return (
     <StyledHeader>
-      <StyledHeaderLogoWrapper>
-        <Link href="/">
-          <StyledHeaderLogoContent>購読幻想</StyledHeaderLogoContent>
-        </Link>
-      </StyledHeaderLogoWrapper>
-      <StyledHeaderNavigationWrapper>
-        {HEADER_NAV_ITEM.map(({ path, text }, i) => (
-          <StyledHeaderNavigationItem key={i}>
-            <Link href={path}>{text}</Link>
-          </StyledHeaderNavigationItem>
-        ))}
-      </StyledHeaderNavigationWrapper>
+      <StyledHeaderContainer center={true}>
+        <StyledHeaderLogoWrapper>
+          <Link href="/">
+            <StyledHeaderLogoContent>購読幻想</StyledHeaderLogoContent>
+          </Link>
+        </StyledHeaderLogoWrapper>
+        <StyledHeaderNavigationWrapper>
+          {HEADER_NAV_ITEM.map(({ path, text }, i) => (
+            <StyledHeaderNavigationItem key={i}>
+              <Link href={path}>{text}</Link>
+            </StyledHeaderNavigationItem>
+          ))}
+        </StyledHeaderNavigationWrapper>
+      </StyledHeaderContainer>
     </StyledHeader>
   );
 };
 
 const StyledHeader = styled.header`
+  width: 100%;
+`;
+
+//FIXME(aida) https://github.com/styled-components/styled-components/issues/1449#issuecomment-520821415
+const StyledHeaderContainer = styled((props) => <Container {...props} />)`
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  max-width: 112rem;
-  padding: 0.8rem 1.6rem;
-  margin: 0 auto;
 `;
 
 const StyledHeaderLogoWrapper = styled.div``;

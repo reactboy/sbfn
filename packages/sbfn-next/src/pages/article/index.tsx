@@ -1,5 +1,5 @@
 import { fetchArticles } from '@lib/strapi';
-import Link from 'next/link';
+import { Link, Container } from '@components/common';
 
 type Props = {
   articles: [];
@@ -8,19 +8,17 @@ type Props = {
 const Article: React.FC<Props> = (props) => {
   const { articles } = props;
   return (
-    <>
+    <Container>
       <main>
         <ul>
           {articles.map(({ title, id }) => (
             <li key={id}>
-              <Link href={`/article/${id}`}>
-                <a>{title}</a>
-              </Link>
+              <Link href={`/article/${id}`}>{title}</Link>
             </li>
           ))}
         </ul>
       </main>
-    </>
+    </Container>
   );
 };
 

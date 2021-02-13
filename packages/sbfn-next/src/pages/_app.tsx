@@ -12,6 +12,9 @@ const GlobalStyle = createGlobalStyle`
     html{
         font-size: 62.5%;
     }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;
+    }
     a{
         text-decoration: none;
     }
