@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
       --dark400: var(--black);
       --gray400: var(--gray);
       --gray300: #eaeaea;
+      --white-mask: rgba(255, 255, 255, 0.8);
     }
     *,
     *:before,

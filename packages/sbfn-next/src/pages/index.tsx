@@ -1,5 +1,7 @@
-const Top = () => {
-  return <>Top</>;
+import { Top } from '@components/templates/top';
+
+const TopPage = () => {
+  return <Top />;
 };
 
-export default Top;
+export default TopPage;

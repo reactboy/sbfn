@@ -6,10 +6,10 @@ const HEADER_NAV_ITEM = [
     path: '/article',
     text: '記事一覧',
   },
-  {
-    path: '/auth',
-    text: 'ログイン',
-  },
+  // {
+  //   path: '/auth',
+  //   text: 'ログイン',
+  // },
 ];
 
 export const Header = () => {
