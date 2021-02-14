@@ -1,28 +1,20 @@
 import { fetchArticles } from '@lib/strapi';
-import { Link, Container } from '@components/common';
+import { Article } from '@components/templates/article';
 
 type Props = {
   articles: [];
 };
 
-const Article: React.FC<Props> = (props) => {
+const ArticlePage: React.FC<Props> = (props) => {
   const { articles } = props;
   return (
-    <Container>
-      <main>
-        <ul>
-          {articles.map(({ title, id }) => (
-            <li key={id}>
-              <Link href={`/article/${id}`}>{title}</Link>
-            </li>
-          ))}
-        </ul>
-      </main>
-    </Container>
+    <main>
+      <Article articles={articles} />
+    </main>
   );
 };
 
-export default Article;
+export default ArticlePage;
 
 export const getStaticProps = async (_context) => {
   const articles = await fetchArticles();
