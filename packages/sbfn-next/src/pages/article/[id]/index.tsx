@@ -1,24 +1,13 @@
 import { fetchArticles, fetchArticleById } from '@lib/strapi';
-import { Link, Container } from '@components/common';
+import { ArticleDetail } from '@components/templates/article';
 
-const ArticleDetail = (props) => {
+const ArticleDetailPage = (props) => {
   const { article } = props;
-  const { title, body, created_at } = article;
-  return (
-    <Container>
-      <header>
-        <h1>{title}</h1>
-        <span>{created_at}</span>
-      </header>
-      <main>{body}</main>
-      <footer>
-        <Link href="/article">一覧に戻る</Link>
-      </footer>
-    </Container>
-  );
+
+  return <ArticleDetail article={article} />;
 };
 
-export default ArticleDetail;
+export default ArticleDetailPage;
 
 export const getStaticProps = async (context) => {
   const {
